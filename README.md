@@ -9,3 +9,9 @@ Project Description
 6. IpInfo.io
 7. Google geo chart live data
 8. two packages add (IpInfo and CORS)
+
+
+================================================
+For Project Run on Localhost
+
+open WebInformation.sln file in Visual Studio 2022 or less version
