@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+  
+       <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa fa-edit"></i>Form Elements
+                    </div>
+                    <div class="card-body">
+                        <form class="form-horizontal" asp-controller="Home" asp-action="GetGeoInfo">
+                           <div class="form-group">
+                            <label for="company">Type IP Address</label>
+                            <input class="form-control" id="ip" type="text" placeholder="Enter your company name" name="ip">
+                           </div>
+                            <div class="form-actions">
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-->
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/chart.js/dist/Chart.min.js"></script>
+    <script src="~/lib/coreui/js/custom-tooltips.min.js"></script>
+    <script src="~/lib/coreui/js/main.js"></script>
+}

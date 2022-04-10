@@ -1,0 +1,68 @@
+﻿@model GetInfoViewModel
+@{
+    ViewData["Title"] = "GetGeoInfo";
+}
+
+<div class="container-fluid">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa fa-edit"></i>Put User IP
+                    </div>
+                    <div class="card-body">
+                        <form class="form-horizontal" asp-controller="Home" asp-action="GetGeoInfo">
+                           <div class="form-group">
+                            <label for="company">Type IP Address</label>
+                            <input class="form-control" id="ip" type="text" placeholder="Enter your IP" name="ip" value="@Model.IP">
+                           </div>
+                            <div class="form-actions">
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-->
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa fa-align-justify"></i> User GeoLocation 
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-responsive-sm">
+                            <thead>
+                                <tr>
+                                    <th>IP</th>
+                                    <th>City</th>
+                                    <th>Region</th>
+                                    <th>Country</th>
+                                    <th>Loc</th>
+                                    <th>TimeZone</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>@Model.IP</td>
+                                    <td>@Model.City</td>
+                                    <td>@Model.Region</td>
+                                    <td>@Model.Country</td>
+                                    <td>@Model.Loc</td>
+                                    <td>@Model.TimeZone</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-->
+        </div>
+        <!-- /.row-->
+      
+
+    </div>
+</div>
